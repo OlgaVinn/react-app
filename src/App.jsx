@@ -1,17 +1,12 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Profile } from "./components/Profile";
-
-const Messages = () => {
-  return <h1>А это страница с Сообщениями</h1>;
-};
-
-const Friends = () => {
-  return <h1>Страница с Друзьями</h1>;
-};
+import { Messages } from "./components/Messages";
+import { Friends } from "./components/Friends";
 
 function App() {
   return (
+    <div className="container mt-5">
     <div className="row">
       <div className="col-3">
         <div className="nav flex-column nav-pills">
@@ -34,6 +29,7 @@ function App() {
           <Route path="/friends" element={<Friends />} />
         </Routes>
       </div>
+    </div>
     </div>
   );
 }
