@@ -8,14 +8,19 @@ const user = {
 };
 
 const users = {
-    0: {name: "Нина", lastname: "Бор"},
-    1: {name: "Ирина", lastname: "Есина"},
-    2: {name: "Сергей", lastname: "Крон"},
-    3: {name: "Юрий", lastname: "Белов"},
-    4: {name: "Олег", lastname: "Серов"},
+    0: {id: "3", name: "Нина", lastname: "Бор", email: "ni@ya.ru", avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=300&q=80"},
+    1: {id: "67",name: "Ирина", lastname: "Есина", email: "ir@ya.ru", avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnN8ZW58MHx8MHx8fDA%3D&w=300&q=80"},
+    2: {id: "14",name: "Сергей", lastname: "Крон", email: "se@ya.ru", avatar: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D&w=300&q=80"},
+    3: {id: "4",name: "Юрий", lastname: "Белов", email: "ur@ya.ru", avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlciUyMHBlcnNvbmF8ZW58MHx8MHx8fDA%3D&w=300&q=80"},
+    4: {id: "48",name: "Олеся", lastname: "Серова", email: "ol@ya.ru", avatar: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dXNlciUyMHBlcnNvbmF8ZW58MHx8MHx8fDA%3D&w=300&q=80"},
 };
 
-export function getUser() {
+export function getUser(userId) {
+    for (let i = 0; i < Object.keys(users).length; i++) {
+        if (users[i].id == userId) {
+            return users[i];
+        }
+    }
     return user;
 }
 
